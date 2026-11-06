@@ -1,0 +1,4 @@
+partition,rows,fraud_count,nonfraud_count,step_min,step_max
+train,6082007,5781,6076226,1,520
+validation,177040,832,176208,521,600
+test,103573,1600,101973,601,743

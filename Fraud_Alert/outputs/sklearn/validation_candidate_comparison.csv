@@ -1,0 +1,3 @@
+candidate,feature_count,best_iteration,fit_seconds,validation_roc_auc,validation_average_precision,validation_precision_at_f1_threshold,validation_recall_at_f1_threshold,validation_f1_at_f1_threshold,validation_alerts_at_f1_threshold,validation_threshold
+pre_event_balance,12,1,9.03651796500003,1.0,1.0,1.0,1.0,1.0,832,0.005470882831214591
+pre_event_core,4,129,37.474729137000054,0.8880598122072952,0.22997785697611836,0.7557603686635944,0.1971153846153846,0.3126787416587226,217,0.25159753763837645

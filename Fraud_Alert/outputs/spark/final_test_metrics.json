@@ -1,0 +1,156 @@
+{
+  "implementation": "PySpark MLlib RandomForestClassifier",
+  "dataset": "PS_20174392719_1491204439457_log.csv",
+  "total_rows": 6362620,
+  "train_end_step": 520,
+  "validation_end_step": 600,
+  "split": [
+    {
+      "rows": 6082007,
+      "fraud": 5781,
+      "step_min": 1,
+      "step_max": 520,
+      "partition": "train",
+      "nonfraud": 6076226
+    },
+    {
+      "rows": 177040,
+      "fraud": 832,
+      "step_min": 521,
+      "step_max": 600,
+      "partition": "validation",
+      "nonfraud": 176208
+    },
+    {
+      "rows": 103573,
+      "fraud": 1600,
+      "step_min": 601,
+      "step_max": 743,
+      "partition": "test",
+      "nonfraud": 101973
+    }
+  ],
+  "input_columns_policy": {
+    "excluded": [
+      "isFlaggedFraud",
+      "newbalanceOrig",
+      "newbalanceDest",
+      "nameOrig",
+      "nameDest",
+      "isFraud-as-feature"
+    ],
+    "reason": "Existing flag/post-transaction fields excluded to reduce leakage and honor alert-time availability."
+  },
+  "validation_threshold_selection": "maximum F1 on validation only",
+  "validation_threshold": 0.7371765588091621,
+  "validation_metrics": {
+    "rows": 177040,
+    "fraud_actual": 832,
+    "nonfraud_actual": 176208,
+    "threshold": 0.7371765588091621,
+    "alerts": 832,
+    "true_positive": 832,
+    "false_positive": 0,
+    "true_negative": 176208,
+    "false_negative": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "roc_auc": 1.0,
+    "average_precision": 1.0
+  },
+  "test_metrics_at_validation_threshold": {
+    "rows": 103573,
+    "fraud_actual": 1600,
+    "nonfraud_actual": 101973,
+    "threshold": 0.7371765588091621,
+    "alerts": 1599,
+    "true_positive": 1599,
+    "false_positive": 0,
+    "true_negative": 101973,
+    "false_negative": 1,
+    "precision": 1.0,
+    "recall": 0.999375,
+    "f1": 0.9996874023132228,
+    "accuracy": 0.9999903449740762,
+    "roc_auc": 1.0,
+    "average_precision": 1.0
+  },
+  "test_budget_metrics": [
+    {
+      "alert_budget_percent": 0.5,
+      "alerts": 518,
+      "true_positive": 518,
+      "false_positive": 0,
+      "false_negative": 1082,
+      "precision": 1.0,
+      "recall": 0.32375
+    },
+    {
+      "alert_budget_percent": 1.0,
+      "alerts": 1036,
+      "true_positive": 1036,
+      "false_positive": 0,
+      "false_negative": 564,
+      "precision": 1.0,
+      "recall": 0.6475
+    },
+    {
+      "alert_budget_percent": 3.0,
+      "alerts": 3107,
+      "true_positive": 1600,
+      "false_positive": 1507,
+      "false_negative": 0,
+      "precision": 0.5149662053427744,
+      "recall": 1.0
+    },
+    {
+      "alert_budget_percent": 5.0,
+      "alerts": 5179,
+      "true_positive": 1600,
+      "false_positive": 3579,
+      "false_negative": 0,
+      "precision": 0.30893994979725814,
+      "recall": 1.0
+    },
+    {
+      "alert_budget_percent": 10.0,
+      "alerts": 10357,
+      "true_positive": 1600,
+      "false_positive": 8757,
+      "false_negative": 0,
+      "precision": 0.15448488944675098,
+      "recall": 1.0
+    },
+    {
+      "alert_budget_percent": 20.0,
+      "alerts": 20715,
+      "true_positive": 1600,
+      "false_positive": 19115,
+      "false_negative": 0,
+      "precision": 0.07723871590634805,
+      "recall": 1.0
+    },
+    {
+      "alert_budget_percent": 30.0,
+      "alerts": 31072,
+      "true_positive": 1600,
+      "false_positive": 29472,
+      "false_negative": 0,
+      "precision": 0.05149330587023687,
+      "recall": 1.0
+    },
+    {
+      "alert_budget_percent": 50.0,
+      "alerts": 51786,
+      "true_positive": 1600,
+      "false_positive": 50186,
+      "false_negative": 0,
+      "precision": 0.030896381261344766,
+      "recall": 1.0
+    }
+  ],
+  "training_seconds": 1288.7453413619996,
+  "warning": "PaySim synthetic-data metrics do not establish performance on real bank transactions. Run in local/Colab mode does not prove cluster scalability. Test period must not be used for tuning."
+}

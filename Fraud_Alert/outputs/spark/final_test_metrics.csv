@@ -1,0 +1,2 @@
+rows,fraud_actual,nonfraud_actual,threshold,alerts,true_positive,false_positive,true_negative,false_negative,precision,recall,f1,accuracy,roc_auc,average_precision
+103573,1600,101973,0.7371765588091621,1599,1599,0,101973,1,1.0,0.999375,0.9996874023132228,0.9999903449740762,1.0,1.0

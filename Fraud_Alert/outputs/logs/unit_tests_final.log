@@ -1,0 +1,20 @@
+test_balance_feature_equality_is_computed_from_pre_event_fields (test_paysim_features.PaySimFeatureTests.test_balance_feature_equality_is_computed_from_pre_event_fields) ... ok
+test_core_ablation_does_not_require_balances (test_paysim_features.PaySimFeatureTests.test_core_ablation_does_not_require_balances) ... ok
+test_feature_matrix_has_no_infinity (test_paysim_features.PaySimFeatureTests.test_feature_matrix_has_no_infinity) ... ok
+test_target_and_post_transaction_columns_are_excluded (test_paysim_features.PaySimFeatureTests.test_target_and_post_transaction_columns_are_excluded) ... ok
+test_alert_channels_match_rules (test_rule_engine.BusinessRuleEngineTests.test_alert_channels_match_rules) ... ok
+test_all_fixture_expectations_match (test_rule_engine.BusinessRuleEngineTests.test_all_fixture_expectations_match) ... ok
+test_missing_required_rule_fields_rejected (test_rule_engine.BusinessRuleEngineTests.test_missing_required_rule_fields_rejected) ... ok
+test_rule1_no_minimum_amount_and_approved_or_declined (test_rule_engine.BusinessRuleEngineTests.test_rule1_no_minimum_amount_and_approved_or_declined) ... ok
+test_rule1_not_triggered_on_non_cash_or_pending_status (test_rule_engine.BusinessRuleEngineTests.test_rule1_not_triggered_on_non_cash_or_pending_status) ... ok
+test_rule2_detects_later_other_country_event_and_references_withdrawal (test_rule_engine.BusinessRuleEngineTests.test_rule2_detects_later_other_country_event_and_references_withdrawal) ... ok
+test_rule2_strictly_less_than_90_minutes (test_rule_engine.BusinessRuleEngineTests.test_rule2_strictly_less_than_90_minutes) ... ok
+test_rule3_excludes_domestic_spend_from_foreign_withdrawal_thresholds (test_rule_engine.BusinessRuleEngineTests.test_rule3_excludes_domestic_spend_from_foreign_withdrawal_thresholds) ... ok
+test_rule3_fifth_foreign_cash_withdrawal (test_rule_engine.BusinessRuleEngineTests.test_rule3_fifth_foreign_cash_withdrawal) ... ok
+test_rule3_rupiah_equivalent_threshold_and_no_duplicate_amount_alert (test_rule_engine.BusinessRuleEngineTests.test_rule3_rupiah_equivalent_threshold_and_no_duplicate_amount_alert) ... ok
+test_frozen_proposed_v2_configuration_has_not_changed (test_rule_freeze.RuleFreezeIntegrityTests.test_frozen_proposed_v2_configuration_has_not_changed) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.037s
+
+OK

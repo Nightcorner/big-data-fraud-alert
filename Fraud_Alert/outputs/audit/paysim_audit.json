@@ -1,0 +1,57 @@
+{
+  "dataset": "PS_20174392719_1491204439457_log.csv",
+  "rows": 6362620,
+  "columns": [
+    "step",
+    "type",
+    "amount",
+    "nameOrig",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "nameDest",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFraud",
+    "isFlaggedFraud"
+  ],
+  "fraud_count": 8213,
+  "nonfraud_count": 6354407,
+  "fraud_rate_percent": 0.12908204481801522,
+  "missing_counts": {
+    "step": 0,
+    "type": 0,
+    "amount": 0,
+    "nameOrig": 0,
+    "oldbalanceOrg": 0,
+    "newbalanceOrig": 0,
+    "nameDest": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 0,
+    "isFraud": 0,
+    "isFlaggedFraud": 0
+  },
+  "type_counts": {
+    "PAYMENT": 2151495,
+    "CASH_OUT": 2237500,
+    "CASH_IN": 1399284,
+    "TRANSFER": 532909,
+    "DEBIT": 41432
+  },
+  "fraud_by_type": {
+    "CASH_OUT": 4116,
+    "TRANSFER": 4097
+  },
+  "steps_min": 1,
+  "steps_max": 743,
+  "steps_with_records": 743,
+  "isFlaggedFraud_count": 16,
+  "isFlaggedFraud_and_fraud_count": 16,
+  "amount_equals_oldbalanceOrg_fraud_count": 8034,
+  "amount_equals_oldbalanceOrg_nonfraud_count": 0,
+  "leakage_policy": {
+    "target_isFraud": "never use as model input",
+    "isFlaggedFraud": "excluded: existing detection flag could encode prior rule-based screening",
+    "newbalanceOrig/newbalanceDest": "excluded: post-transaction balances may not be available at alert decision time",
+    "oldbalanceOrg/oldbalanceDest": "included only in expanded pre-event feature experiment; operational availability must be justified"
+  }
+}
