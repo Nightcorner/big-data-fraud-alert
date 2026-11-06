@@ -1,0 +1,2 @@
+rows,fraud_actual,nonfraud_actual,threshold,alerts,true_positive,false_positive,true_negative,false_negative,precision,recall,f1,accuracy,roc_auc,average_precision,selected_model,threshold_source
+103573,1600,101973,0.005470882831214591,1599,1599,0,101973,1,1.0,0.999375,0.9996874023132228,0.9999903449740762,0.9996859769252646,0.9993846550259238,pre_event_balance,validation maximum F1

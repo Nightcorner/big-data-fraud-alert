@@ -1,0 +1,96 @@
+{
+  "dataset": "PS_20174392719_1491204439457_log.csv",
+  "total_rows_in_source": 6362620,
+  "sampling_method": "systematic every 64th row",
+  "sampled_transactions": 99416,
+  "sampled_fraud_transactions": 118,
+  "nodes": 191849,
+  "directed_edges": 99416,
+  "unique_source_accounts_sample": 99413,
+  "unique_destination_accounts_sample": 92439,
+  "weighted_in_degree_top10": [
+    {
+      "account": "C408553489",
+      "weight": 5
+    },
+    {
+      "account": "C936857833",
+      "weight": 5
+    },
+    {
+      "account": "C490150701",
+      "weight": 5
+    },
+    {
+      "account": "C980726513",
+      "weight": 5
+    },
+    {
+      "account": "C157316544",
+      "weight": 5
+    },
+    {
+      "account": "C326180938",
+      "weight": 5
+    },
+    {
+      "account": "C1468376518",
+      "weight": 5
+    },
+    {
+      "account": "C1626204867",
+      "weight": 5
+    },
+    {
+      "account": "C1359484306",
+      "weight": 5
+    },
+    {
+      "account": "C323287038",
+      "weight": 4
+    }
+  ],
+  "weighted_out_degree_top10": [
+    {
+      "account": "C1970353657",
+      "weight": 2
+    },
+    {
+      "account": "C773803957",
+      "weight": 2
+    },
+    {
+      "account": "C842261285",
+      "weight": 2
+    },
+    {
+      "account": "C1000010387",
+      "weight": 1
+    },
+    {
+      "account": "C100001139",
+      "weight": 1
+    },
+    {
+      "account": "C1000040930",
+      "weight": 1
+    },
+    {
+      "account": "C1000080118",
+      "weight": 1
+    },
+    {
+      "account": "C100008433",
+      "weight": 1
+    },
+    {
+      "account": "C100009725",
+      "weight": 1
+    },
+    {
+      "account": "C1000100039",
+      "weight": 1
+    }
+  ],
+  "interpretation_limit": "Descriptive graph on systematic sample only; account degree is not proof of fraud and the sample over/under-represents rare patterns depending on row order. For full-scale graph analytics, use Spark GraphFrames/GraphX or another distributed graph engine."
+}

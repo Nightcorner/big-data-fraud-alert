@@ -1,0 +1,4 @@
+rows,fraud,step_min,step_max,partition,nonfraud
+6082007,5781,1,520,train,6076226
+177040,832,521,600,validation,176208
+103573,1600,601,743,test,101973

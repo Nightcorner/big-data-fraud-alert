@@ -1,0 +1,13 @@
+feature,importance_gain,importance_split
+amount_equals_oldbalanceOrg,3551490.0,1
+oldbalanceOrg,2560.919921875,1
+amount,140.64100646972656,1
+step,0.8923110216856003,2
+type,0.0,0
+log_amount,0.0,0
+log_oldbalanceOrg,0.0,0
+oldbalanceDest,0.0,0
+log_oldbalanceDest,0.0,0
+amount_to_oldbalanceOrg_ratio,0.0,0
+origin_balance_sufficient,0.0,0
+destination_balance_zero,0.0,0

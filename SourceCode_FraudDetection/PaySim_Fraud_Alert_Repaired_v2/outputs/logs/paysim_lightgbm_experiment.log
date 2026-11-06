@@ -1,0 +1,54 @@
+Loading PaySim: /mnt/data/PaySim_Fraud_Alert_Repaired_v1/data/PS_20174392719_1491204439457_log.csv
+ partition    rows  fraud_count  nonfraud_count  step_min  step_max
+     train 6082007         5781         6076226         1       520
+validation  177040          832          176208       521       600
+      test  103573         1600          101973       601       743
+
+Training pre_event_core with 4 features...
+Training until validation scores don't improve for 35 rounds
+[50]	valid_0's auc: 0.86488	valid_0's binary_logloss: 0.0216115
+[100]	valid_0's auc: 0.882729	valid_0's binary_logloss: 0.0214031
+[150]	valid_0's auc: 0.889717	valid_0's binary_logloss: 0.0214189
+Early stopping, best iteration is:
+[129]	valid_0's auc: 0.88806	valid_0's binary_logloss: 0.0213598
+pre_event_core: val ROC-AUC=0.888060; AP=0.229978; threshold=0.25159754; fit=37.5s
+
+Training pre_event_balance with 12 features...
+Training until validation scores don't improve for 35 rounds
+Early stopping, best iteration is:
+[1]	valid_0's auc: 1	valid_0's binary_logloss: 0.00113591
+pre_event_balance: val ROC-AUC=1.000000; AP=1.000000; threshold=0.00547088; fit=9.0s
+
+Candidate comparison (model selected by validation Average Precision):
+        candidate  feature_count  best_iteration  fit_seconds  validation_roc_auc  validation_average_precision  validation_precision_at_f1_threshold  validation_recall_at_f1_threshold  validation_f1_at_f1_threshold  validation_alerts_at_f1_threshold  validation_threshold
+pre_event_balance             12               1     9.036518             1.00000                      1.000000                               1.00000                           1.000000                       1.000000                                832              0.005471
+   pre_event_core              4             129    37.474729             0.88806                      0.229978                               0.75576                           0.197115                       0.312679                                217              0.251598
+
+SELECTED MODEL: pre_event_balance
+TEST METRICS at validation-chosen threshold: {
+  "rows": 103573,
+  "fraud_actual": 1600,
+  "nonfraud_actual": 101973,
+  "threshold": 0.005470882831214591,
+  "alerts": 1599,
+  "true_positive": 1599,
+  "false_positive": 0,
+  "true_negative": 101973,
+  "false_negative": 1,
+  "precision": 1.0,
+  "recall": 0.999375,
+  "f1": 0.9996874023132228,
+  "accuracy": 0.9999903449740762,
+  "roc_auc": 0.9996859769252646,
+  "average_precision": 0.9993846550259238
+}
+TEST FIXED BUDGETS:  alert_budget_percent  alerts  true_positive  false_positive  false_negative  precision   recall  random_expected_true_positive  lift_over_random
+                  0.5     518            518               0            1082   1.000000 0.323750                       8.002085         64.733125
+                  1.0    1036           1036               0             564   1.000000 0.647500                      16.004171         64.733125
+                  3.0    3107           1599            1508               1   0.514644 0.999375                      47.997065         33.314537
+                  5.0    5179           1599            3580               1   0.308747 0.999375                      80.005407         19.986149
+                 10.0   10357           1599            8758               1   0.154388 0.999375                     159.995366          9.994039
+                 20.0   20715           1599           19116               1   0.077190 0.999375                     320.006179          4.996779
+                 30.0   31072           1600           29472               0   0.051493 1.000000                     480.001545          3.333323
+                 50.0   51786           1600           50186               0   0.030896 1.000000                     799.992276          2.000019
+Outputs saved to /mnt/data/PaySim_Fraud_Alert_Repaired_v1/outputs/sklearn
